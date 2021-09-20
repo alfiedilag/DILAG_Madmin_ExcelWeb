@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome Site Icons for SocMed Icons-->
+    <script src="https://kit.fontawesome.com/7c04fe9cbf.js" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <title>Day8-11_Madmin_Posts</title>
+
+    <style>
+        body{
+        background-image: url(imgs/purple.jpg);
+        }
+        
+        #preloader{
+        position:absolute;
+        top: 43% !important;
+        left: 47% !important;
+
+        width: 100px;
+        height: 100px;
+        border-width: 10px;
+        border-style: dotted;
+        border-color:rgb(230, 4, 188) !important;
+        border-bottom-color: transparent !important;
+        border-radius: 50%;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<body>
+<nav class="purple darken-2">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo">Madmin</a>
+    
+<!-- sidenav trigger -->
+        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large right">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li >
+                <a href="8-11Madmin.html">Dashboard</a>
+            </li>
+            <li class="active">
+                <a href="madminposts.html">Posts</a>
+            </li>
+            <li>
+                <a href="categories.html">Categories</a>
+            </li>
+            <li>
+                <a href="comments.html">Comments</a>
+            </li>
+            <li>
+                <a href="users.html">Users</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Sidenav -->
+<ul id="slide-out" class="sidenav">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="imgs/bg8.png" alt="">
+            </div>
+            
+            <a href="#">
+                <img src="imgs/p6.jpeg" alt="" class="circle">
+            </a>
+            <a href="#">
+                <span class="name white-text">Park Jimin</span>
+            </a>
+            <a href="#">
+                <span class="email white-text">jiminie@gmail.com</span>
+            </a>
+        </div> 
+    </li>
+
+    <li class="active">
+        <a href="index.html">
+            <i class="material-icons">dashboard</i>
+            Dashboard
+        </a>
+    </li>
+    <li>
+        <a href="posts.html">Posts</a>
+    </li>
+    <li>
+        <a href="categories.html">Categories</a>
+    </li>
+    <li>
+        <a href="comments.html">Comments</a>
+    </li>
+    <li>
+        <a href="users.html">Users</a>
+    </li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li>
+        <a class="subheader">Account Controls</a>
+    </li>
+    <li>
+        <a href="login.html" class="waves-effect">Logout</a>
+    </li>
+</ul>
+<!-- End Sidenav -->
+
+
+<!-- Section Visitor View-->
+<section class="section section-visitor blue lighten-4">
+    <div class="row">
+        <div class="col s12 m6 l8">
+            <div class="card-panel">
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+            </div>
+        </div>
+
+<!-- Section Latest Comment-->
+        <div class="col s12 m6 l4">
+            <ul class="collection with-header latest-comments">
+                <li class="collection-header">
+                    <h5>Latest Comments</h5>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="imgs/p2.jpg" alt="" class="circle">
+                    <span class="title">Kim Seokjin</span>
+                    <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea veritatis accusantium qui, rerum necessitatibus doloremque hic? Reiciendis rem itaque natus, vitae enim, temporibus cumque, ut cum debitis labore odio perspiciatis.</p>
+                    <a href="" class="approve green-text">Approve</a> |
+                    <a href="" class="deny red-text">Deny</a>
+                </li>
+                    <li class="collection-item avatar">
+                    <img src="imgs/p3.jpg" alt="" class="circle">
+                    <span class="title">KIm Namjoon</span>
+                    <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea veritatis accusantium qui, rerum necessitatibus doloremque hic? Reiciendis rem itaque natus, vitae enim, temporibus cumque, ut cum debitis labore odio perspiciatis.</p>
+                    <a href="" class="approve green-text">Approve</a> |
+                    <a href="" class="deny red-text">Deny</a>
+                </li>
+                <li class="collection-item avatar">
+                    <img src="imgs/p4.jpg" alt="" class="circle">
+                    <span class="title">Min Yoogin</span>
+                    <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea veritatis accusantium qui, rerum necessitatibus doloremque hic? Reiciendis rem itaque natus, vitae enim, temporibus cumque, ut cum debitis labore odio perspiciatis.</p>
+                    <a href="#!" class="approve green-text">Approve</a> |
+                    <a href="#!" class="deny red-text">Deny</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Section Visitor View-->
+
+<!-- Section Recent Posts & To Dos-->
+<section class="section section-recent">
+    <div class="row">
+        <div class="col s12 m6 l8">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Recent Posts</span>
+                        
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Song Title</th>
+                                <th>Category</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Butter</td>
+                                <td>Dance-pop disco-pop EDM</td>
+                                <td>
+                                    <a href="details.html" class="btn purple lighten-2">Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Filter</td>
+                                <td>Latin Pop</td>
+                                <td>
+                                    <a href="details.html" class="btn purple lighten-2">Details</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Serendipity</td>
+                                <td>Alternative R&B</td>
+                                <td>
+                                    <a href="details.html" class="btn purple lighten-2">Details</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Quick Todos</span>
+                        <form id="todo-form">
+                            <div class="input-field">
+                                <input type="text" id="todo" placeholder="Add Todo">
+                            </div>
+                        </form>
+                        <ul class="collection todos">
+                            <li class="collection-item">
+                                <div>In The Soop Seasson2
+                                    <a href="#!" class="secondary-content delete">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>Stream Butter
+                                    <a href="#!" class="secondary-content delete">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>UN Speech
+                                    <a href="#!" class="secondary-content delete">
+                                        <i class="material-icons">close</i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- End Section Recent Posts & To Dos-->
+
+<!-- Footer -->
+<footer class="section purple darken-2 white-text center">
+    <p>Madmin Panel Copyright &copy; 2021</p>
+</footer>
+<!-- End Footer -->
+
+
+<!-- Fixed Action Button -->
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large pink accent-2">
+        <i class="large material-icons">add</i>
+    </a>
+    
+    <ul>
+        <li>
+            <a href="#post-modal" class="btn-floating blue modal-trigger">
+                <i class="material-icons">mode_edit</i>
+            </a>
+        </li>
+        <li>
+            <a href="#category-modal" class="btn-floating yellow darken-1 modal-trigger" >
+                <i class="material-icons">folder</i>
+            </a>
+        </li>
+        <li>
+            <a href="#user-modal" class="btn-floating green modal-trigger">
+                <i class="material-icons">supervisor_account</i>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- End Fixed Action Button -->
+
+
+<!-- Add Post Modal -->
+<div id="post-modal" class="modal">
+    <div class="modal-content">
+        <h4>Add Post</h4>
+        <form>
+            <div class="input-field">
+                <input type="text" id="title">
+                <label for="title">Title</label>
+            </div>
+            
+            <div class="input-field">
+                <select>
+                    <option value="" disabled selected>Select Option</option>
+                    <option value="1">Albums</option>
+                    <option value="2">Merch</option>
+                    <option value="3">Run BTS</option>
+                    <option value="4">In The Soop</option>
+                </select>
+                    <label>Category</label>
+            
+            <div class="input-field">
+                <textarea class="materialize-textarea" name="body"></textarea>
+                <label for="body"></label>
+            </div>
+            </div>
+        </form>
+            
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn purple white-text">Submit</a>
+    </div>
+    </div>
+</div>
+<!-- End Add Post Modal -->
+
+<!-- Category Modal -->
+<id id="category-modal" class="modal">
+    <div class="modal-content">
+        <h4>Add Category</h4>
+            <form>
+                <div class="input-field">
+                    <input type="text" id="title">
+                    <label for="title">Title</label>
+                </div>
+            </form>
+    
+    <div class="modal-footer">
+        <a class="modal-action modal-close btn purple white-text">Submit</a>
+    </div>
+    </div>
+</id>
+<!--End Category Modal -->
+
+
+<!-- User Modal -->
+<div id="user-modal" class="modal">
+    <div class="modal-content">
+        <h4>Add User</h4>
+            <form>
+                <div class="input-field">
+                    <input type="text" id="name">
+                    <label for="name">Name</label>
+                </div>
+                
+                <div class="input-field">
+                    <input type="email" id="email">
+                    <label for="email">Email</label>
+                </div>
+                
+                <div class="input-field">
+                    <input type="password" id="password">
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" id="password2">
+                    <label for="password2">Confirm Password</label>
+                </div>
+            </form>
+    
+    <div class="modal-footer">
+        <a class="modal-action modal-close btn purple white-text">Submit</a>
+    </div>
+    </div>
+</div>
+<!-- EndUser Modal -->
+
+
+
+<!-- Preloaders -->
+<div id="preloader" class="preloader-wrapper big active loader">
+    <div class="spinner-layer spinner-purple-only">
+        <div class="circle-clipper left">
+            <div class="circle"></div>
+        </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+        <div class="circle-clipper right">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+<!-- End Preloaders -->
+
+
+
+
+
+
+<div style="height: auto;"></div>
+
+<!-- JQuery CDN from JquerySite Minified -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+
+<!-- CanvaJS -->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<!-- CKeditor CDN -->
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+<script src="js/chart.js"></script>   
+
+
+
+
+<script>
+    // Hide Sections
+    $('.section').hide();
+    
+    setTimeout(function() {
+        $(document).ready(function(){
+        // Show sections
+        $('.section').fadeIn();
+        // Hide loader
+        $('.loader').fadeOut();
+        // Sidenav
+        $('.sidenav').sidenav({
+            edge:'right',
+        });
+        //  Modal
+        $('.modal').modal();
+        // Floating Action Button
+        $('.fixed-action-btn').floatingActionButton();
+        // Select
+        $('select').formSelect();
+        // CKEditor
+        CKEDITOR.replace('body');
+        // Comments - Approve & Deny
+        $('.approve').click(function(e) {
+            M.toast({html: 'Comment Approved!'});
+            e.preventDefault();
+        });
+        $('.deny').click(function(e) {
+        M.toast({html: 'Comment Denied!'});
+        e.preventDefault();
+        });
+        // Counter
+        $('.count').each(function() {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 9000,
+            easing: 'swing',
+            step: function(now) {
+            $(this).text(Math.ceil(now));
+        }
+        });
+        });
+        
+        // Quick todos
+        $('#todo-form').submit(function(e) {
+            console.log($('#todo').val());
+            const output = `<li class="collection-item">
+                <div>${$('#todo').val()}
+                    <a href="#!" class="secondary-content delete">
+                        <i class="material-icons">close</i>
+                    </a>
+                </div>
+                </li>`;
+
+        $('.todos').append(output);   
+            M.toast({html: 'Todo Added!'});
+            e.preventDefault();
+        });
+
+        // Delete Todos
+        $('.todos').on('click', '.delete', function() {
+        // console.log(this);
+        $(this).parent().parent().remove();
+        M.toast({html: 'Todo Removed!'});
+    });
+    });
+    }, 3000);
+
+</script>
+</body>
+</html>
+
+
+
